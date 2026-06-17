@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Shop', href: '/shop' },
-  { label: 'Testimonial', href: '/testimonial' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Collections', href: '/collections' },
 ]
 
@@ -42,11 +42,10 @@ export default function Header() {
               <li key={label}>
                 <Link
                   href={href}
-                  className={`text-sm font-medium transition-colors no-underline ${
-                    isActive
+                  className={`text-sm font-medium transition-colors no-underline ${isActive
                       ? 'text-[#e8b44b] border-b-2 border-[#e8b44b] pb-0.5'
                       : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                    }`}
                 >
                   {label}
                 </Link>
@@ -104,9 +103,8 @@ export default function Header() {
                 <Link
                   href={href}
                   onClick={() => setMenuOpen(false)}
-                  className={`text-sm font-medium no-underline ${
-                    pathname === href ? 'text-[#e8b44b]' : 'text-gray-600'
-                  }`}
+                  className={`text-sm font-medium no-underline ${pathname === href ? 'text-[#e8b44b]' : 'text-gray-600'
+                    }`}
                 >
                   {label}
                 </Link>
